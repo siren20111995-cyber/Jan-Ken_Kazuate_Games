@@ -139,6 +139,7 @@
     </Manifest>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClCompile Include="Janken.cpp" />
     <ClCompile Include="Kazuate.cpp" />
     <ClCompile Include="main.cpp" />
   </ItemGroup>

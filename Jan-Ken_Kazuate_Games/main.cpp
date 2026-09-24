@@ -1,63 +1,42 @@
-//#"janken.h"
+#include"Kazuate.h"
+#include"janken.h"
 #include <iostream>
 using namespace std;
 
 
-enum JankenGame
+
+
+int main()
 {
-	Rock = 0,
-	Paper = 1,
-	Scissors = 2
-};
-
-JankenGame Play(int choice)
-{
-	return static_cast<JankenGame>(choice);
-}
-
-bool Janken()
-{
-	const char* janken[] = { "Rock.", "Paper.", "Scissors." };
-
-	int user;
-
-	cout << "Enter a number 0, 1 or 3: ";
-	cin >> user;
-	if (user == -1)
+	while (janken())
 	{
-		return false;
+		//nothing
 	}
-
-	if (user > 2 || user < 0)
-	{
-		cout << "Invalid Number! Enter a number 0 - 2:" << endl;
-		return true;
-	}
-	int computer = (rand() % 3);
-	if (computer == user)
-	{
-		cout << "It is a tie." << endl;
-	}
-	else if ((user == 0 && computer == 2) || (user == 1 && computer == 1) ||
-		(user == 2 && computer == 1))
-	{
-		cout << "You win!" << endl;
-	}
-
-	else
-	{
-		cout << "Computer wins!" << endl;
-	}
-
-
-	cout << janken[Play(user)] << endl;
+	return 0;
 }
 
 int main()
 {
-	while (Janken())
+	srand(static_cast<unsigned int>(time(0)));
+	int guess;
+	int answer = kazuate();
+	cout << "Guess the number between 1 - 100:";
+	cin >> guess;
+
+	while (guess != answer)
 	{
-		//nothing
+		if (guess > answer)
+		{
+			cout << "Too big." << endl;
+		}
+		else
+		{
+			cout << "Too small." << endl;
+		}
+
+		cout << "Try again.";
+		cin >> guess;
 	}
+	cout << "Congratulation! It is correct." << endl;
 	return 0;
 }

@@ -21,6 +21,9 @@
     <ClCompile Include="Kazuate.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="Janken.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="janken.h">
