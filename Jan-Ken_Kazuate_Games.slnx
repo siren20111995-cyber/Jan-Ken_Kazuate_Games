@@ -1,0 +1,7 @@
+<Solution>
+  <Configurations>
+    <Platform Name="x64" />
+    <Platform Name="x86" />
+  </Configurations>
+  <Project Path="Jan-Ken_Kazuate_Games/Jan-Ken_Kazuate_Games.vcxproj" />
+</Solution>
